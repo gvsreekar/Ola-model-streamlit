@@ -3,7 +3,7 @@ import pandas as pd
 import joblib 
 from custom_transformers import column_names
 
-loaded_model = joblib.load('rfc_model_final.joblib')
+loaded_model = joblib.load(r'C:\Users\SHREEKAR\Desktop\DSML Course\Ola-model-streamlit\rfc_model_final.joblib')
 
 input_data = pd.DataFrame([{'Age':25,'Gender':1,'City':'C20',
                             'Education_Level':3,'Income':25690,'Joining Designation':1,

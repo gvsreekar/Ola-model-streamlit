@@ -4,7 +4,7 @@ import joblib
 from custom_transformers import column_names
 import streamlit as st
 
-loaded_model = joblib.load('rfc_model_final.joblib')
+loaded_model = joblib.load(r'C:\Users\SHREEKAR\Desktop\DSML Course\Ola-model-streamlit\rfc_model_final.joblib')
 
 def ola_churn_prediction(input_data:pd.DataFrame):
     pred = loaded_model.predict(input_data)
@@ -17,7 +17,7 @@ def ola_churn_prediction(input_data:pd.DataFrame):
 def main():
     
     st.title('Ola drivers churn predictor:car:')
-    st.image('Ola-Cabs-Logo.jpg',use_column_width=True)
+    #st.image('Ola-Cabs-Logo.jpg',use_column_width=True)
     st.write("**Enter the details of driver to predict whether he/she would stay or churn**")
     
     output = ""
@@ -27,7 +27,7 @@ def main():
     
     with col1:
         # Take details in the input
-        Age = st.number_input("Enter the age of the Driver", min_value=18.0, max_value=65.0, step=0.1, value=25.0)
+        Age = st.number_input("Enter the age of the Driver", min_value=18.0, max_value=65.0, step=1.0, value=25.0)
         gender_options = [0.0,1.0]
         Gender = st.selectbox("Select the gender of the Driver from the dropdown (0 : Male, 1: Female)",gender_options)
         city_options = ['C1','C2','C3','C4','C5','C6','C7','C8','C9','C10','C11',
@@ -35,7 +35,7 @@ def main():
                      'C23','C24','C25','C26','C27','C28','C29']
         City = st.selectbox("Select the city from the dropdown", city_options)
         Education_Level = st.number_input("Enter the education level of the Driver (0 for 10+ ,1 for 12+ ,2 for graduate)",min_value=0.0,max_value=2.0,step=1.0)
-        Income = st.slider("Enter monthly income of Driver",min_value=0.0,max_value=3000000,value=30000)
+        Income = st.slider("Enter monthly income of Driver",min_value=0.0,max_value=3000000.0,value=30000.0)
     
     with col2:
         jd_options = [1,2,3,4,5]
