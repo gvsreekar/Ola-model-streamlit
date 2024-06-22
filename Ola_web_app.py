@@ -4,7 +4,7 @@ import joblib
 from custom_transformers import column_names
 import streamlit as st
 
-loaded_model = joblib.load(r'C:\Users\SHREEKAR\Desktop\DSML Course\Ola-model-streamlit\rfc_model_final.joblib')
+loaded_model = joblib.load('rfc_model_final.joblib')
 
 def ola_churn_prediction(input_data:pd.DataFrame):
     pred = loaded_model.predict(input_data)
@@ -17,7 +17,7 @@ def ola_churn_prediction(input_data:pd.DataFrame):
 def main():
     
     st.title('Ola drivers churn predictor:car:')
-    #st.image('Ola-Cabs-Logo.jpg',use_column_width=True)
+    #st.image('Ola_logo.png',use_column_width=True)
     st.write("**Enter the details of driver to predict whether he/she would stay or churn**")
     
     output = ""
