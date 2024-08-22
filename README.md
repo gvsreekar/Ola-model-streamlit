@@ -10,8 +10,8 @@ Intro to the Dataset and the Aim:
 
 🔍 Exploratory Data Analysis (EDA): Comprehensive exploration to identify patterns, correlations, and outliers.
 
-🛠 Feature Engineering: Innovating from the existing dataset to enhance model classification.
-📐 Random Forests, XGboost and GBDT : Constructing a bagging and boosting models using Sklearn.
-📝 Classification Report: Detailed metrics including accuracy, precision, recall, and F1-score.
-📉 ROC-AUC Curve Analysis: Evaluating class distinction ability.
+🛠 Feature Engineering: Innovating from the existing dataset to enhance model classification.   
+    📐 Random Forests, XGboost and GBDT : Constructing a bagging and boosting models using Sklearn.
+     📝 Classification Report: Detailed metrics including accuracy, precision, recall, and F1-score.
+     📉 ROC-AUC Curve Analysis: Evaluating class distinction ability.
 
